@@ -1,0 +1,4 @@
+.venv
+.direnv
+.ipynb_checkpoints
+iframe_figures
