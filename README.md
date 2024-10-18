@@ -1,0 +1,2 @@
+- https://pypi.org/search - search for the package you want to install in pypi
+- https://search.nixos.org/packages - search for the package you want to install in nixpkgs

@@ -55,20 +55,23 @@
         LD_LIBRARY_PATH =
           pkgs.lib.makeLibraryPath [
           ];
+
+        JUPYTER_CONFIG_DIR = "./.jupyter";
       };
 
       shellHook = ''
         echo "Entering devShell for ${system}";
 
-        # WorkAroud: make vscode's python extension work
+        # Persistent virtual environment setup
+        if [[ ! -d ./venv ]]; then
+          python -m venv ./venv
+        fi
+        source ./venv/bin/activate
+
+        # workaround for vscode's to find the venv
         venv="$(cd $(dirname $(which python)); cd ..; pwd)"
         ln -Tsf "$venv" .venv
       '';
-
-      /*
-      * https://pypi.org/search - search for the package you want to install in pypi
-      * https://search.nixos.org/packages - search for the package you want to install in nixpkgs
-      */
     };
   };
 }
