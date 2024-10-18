@@ -2,9 +2,7 @@
     "codeCellConfig": {
         "autoClosingBrackets": true,
         "codeFolding": true,
-        "highlightActiveLine": true,
-        "highlightTrailingWhitespace": true,
-        "highlightWhitespace": true
+        "highlightActiveLine": true
     },
     "markdownCellConfig": {
         "lineNumbers": false,

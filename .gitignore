@@ -3,3 +3,4 @@
 .ipynb_checkpoints
 iframe_figures
 venv
+.jupyter/lab/workspaces

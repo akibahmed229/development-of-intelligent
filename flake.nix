@@ -49,6 +49,7 @@
           plotly
           scikit-learn
           imbalanced-learn
+          tensorflow
         ]);
 
       env = {
