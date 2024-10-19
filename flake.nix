@@ -29,6 +29,7 @@
           libzip
           zlib
           poetry
+          python311
         ])
         ++ (with pkgs.python311Packages; [
           virtualenv
@@ -50,6 +51,7 @@
           scikit-learn
           imbalanced-learn
           tensorflow
+          keras
         ]);
 
       env = {
@@ -58,6 +60,7 @@
           ];
 
         JUPYTER_CONFIG_DIR = "./.jupyter";
+        TF_ENABLE_ONEDNN_OPTS = 0;
       };
 
       shellHook = ''
